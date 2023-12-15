@@ -1,4 +1,5 @@
 <script>
+    import { SvelteUIProvider } from '@svelteuidev/core';
     import { Switch } from "@svelteuidev/core"
 
     import Sticker from "$lib/sticker.svelte"
@@ -29,15 +30,17 @@
     }
 </style>
 
-<header>
-    <div class="title">{title}</div>
-    <div class="edit-switch">
-        <Switch size="lg" offLabel="view" onLabel="edit" bind:checked={editable} />
+<SvelteUIProvider themeObserver="dark">
+    <header>
+        <div class="title">{title}</div>
+        <div class="edit-switch">
+            <Switch size="lg" offLabel="view" onLabel="edit" bind:checked={editable} />
+        </div>
+    </header>
+    
+    <div>
+        {#each wall as sticker}
+            <Sticker {sticker} {editable} />
+        {/each}
     </div>
-</header>
-
-<div>
-    {#each wall as sticker}
-        <Sticker {sticker} {editable} />
-    {/each}
-</div>
+</SvelteUIProvider>

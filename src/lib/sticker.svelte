@@ -1,4 +1,7 @@
 <script lang="ts">
+    import { Modal } from "@svelteuidev/core"
+    import { ExternalLink } from "radix-icons-svelte"
+
     interface Sticker {
         id: number,
         position: {
@@ -30,6 +33,8 @@
     let left = positionToCSS(sticker.position.x)
     let width = scaleToCSS(sticker.position.scale)
     let height = scaleToCSS(sticker.position.scale)
+
+    let modalOpened = false
 </script>
 
 <style>
@@ -74,8 +79,14 @@
     }
 </style>
 
-<div class="bounding-box" class:editable={editable} style:top={top} style:left={left} >
+<div class="bounding-box" class:editable={editable} style:top={top} style:left={left} on:click={() => (modalOpened = true)}>
     <img class="sticker" src={`logos/${sticker.logo.key}.svg`} alt={sticker.logo.name} style:width={width} style:height={height} style:rotate={sticker.position.rotate} />
     <img class="ui-handle ui-rotate" src={`icons/rotate.svg`} alt="rotate" />
     <img class="ui-handle ui-resize" src={`icons/square.svg`} alt="resize" />
 </div>
+
+<Modal opened={modalOpened} title={sticker.logo.name} on:close={() => (modalOpened = false)}>
+
+    <a target="_blank" href={sticker.projectURL}>Project Website <ExternalLink /></a>
+    <div>{sticker.story}</div>
+</Modal>
