@@ -31,7 +31,6 @@
 
 <header>
     <div class="title">{title}</div>
-    <div>{editable}</div>
     <div class="edit-switch">
         <Switch size="lg" offLabel="view" onLabel="edit" bind:checked={editable} />
     </div>
