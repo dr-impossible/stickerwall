@@ -29,27 +29,55 @@
 
     let top = positionToCSS(sticker.position.y)
     let left = positionToCSS(sticker.position.x)
+    let width = scaleToCSS(sticker.position.scale)
+    let height = scaleToCSS(sticker.position.scale)
 </script>
 
 <style>
+    
     div {
-        width: 100px;
-        height: 100px;
+        --ui-icon-size: 20px;
         position: absolute;
         padding: 5px;
         border: 1px solid rgba(0,0,0,0);
     }
-
+    
     div:hover {
         border: 1px dotted black;
+
+    }
+    
+    div:hover .ui-handle {
+        visibility: visible;
     }
 
-    img {
+    img.sticker {
+        width: 100px;
+        height: 100px;
         width: 100%;
         height: 100%;
     }
+
+    img.ui-handle {
+        width: var(--ui-icon-size);
+        height: var(--ui-icon-size);
+        position: absolute;
+        visibility: hidden;
+    }
+
+    img.ui-rotate {
+        top: calc(-1 * var(--ui-icon-size));
+        right: calc(-1 * var(--ui-icon-size));
+    }
+
+    img.ui-resize {
+        bottom: calc(-1 * var(--ui-icon-size));
+        right: calc(-1 * var(--ui-icon-size));
+    }
 </style>
 
-<div style:top={top} style:left={left} style:scale={sticker.position.scale} style:rotate={sticker.position.rotate}>
-    <img src={`logos/${sticker.logo.key}.svg`} alt={sticker.logo.name} />
-</div>
+<div class="bounding-box" style:top={top} style:left={left} >
+    <img class="sticker" src={`logos/${sticker.logo.key}.svg`} alt={sticker.logo.name} style:width={width} style:height={height} style:rotate={sticker.position.rotate} />
+    <img class="ui-handle ui-rotate" src={`icons/rotate.svg`} alt="rotate" />
+    <img class="ui-handle ui-resize" src={`icons/square.svg`} alt="resize" />
+ </div>

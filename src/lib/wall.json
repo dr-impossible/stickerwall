@@ -1,32 +1,35 @@
-[
-    {
-        "id": 0,
-        "position": {
-            "x": 0.5,
-            "y": 0.5,
-            "rotate": "0.3turn",
-            "scale": 2.5
+{
+    "title": "Adam's Sticker Wall",
+    "wall": [
+        {
+            "id": 0,
+            "position": {
+                "x": 0.5,
+                "y": 0.5,
+                "rotate": "0.3turn",
+                "scale": 2.5
+            },
+            "logo": {
+                "key": "svelte-logo-square",
+                "name": "Svelte"
+            },
+            "story": "I was first introduced to Svelte by Mark Oosterveld back in about 2019. It sounded cool, but I was a little worried that all the compiler magic behind the scenes would make any issues with the library difficult to debug. I was reintroduced to it in 2023 when pairing with Jerome Lecomte on one of his projects. I was blown away by how clear and readable the syntax was! This feels like building simple webpages before we complicated them with all these heavyweight frameworks. The compiler for Svelte is doing a lot of heavy lifting here, but it's truly worth it. I decided to build this site as my first project in Svelte.",
+            "projectURL": "https://svelte.dev"
         },
-        "logo": {
-            "key": "svelte-logo-square",
-            "name": "Svelte"
-        },
-        "story": "I was first introduced to Svelte by Mark Oosterveld back in about 2019. It sounded cool, but I was a little worried that all the compiler magic behind the scenes would make any issues with the library difficult to debug. I was reintroduced to it in 2023 when pairing with Jerome Lecomte on one of his projects. I was blown away by how clear and readable the syntax was! This feels like building simple webpages before we complicated them with all these heavyweight frameworks. The compiler for Svelte is doing a lot of heavy lifting here, but it's truly worth it. I decided to build this site as my first project in Svelte.",
-        "projectURL": "https://svelte.dev"
-    },
-    {
-        "id": 1,
-        "position": {
-            "x": 0.25,
-            "y": 0.25,
-            "rotate": "0",
-            "scale": 1
-        },
-        "logo": {
-            "key": "ts-logo-512",
-            "name": "TypeScript"
-        },
-        "story": "I was first introduced to Svelte by Mark Oosterveld back in about 2019. It sounded cool, but I was a little worried that all the compiler magic behind the scenes would make any issues with the library difficult to debug. I was reintroduced to it in 2023 when pairing with Jerome Lecomte on one of his projects. I was blown away by how clear and readable the syntax was! This feels like building simple webpages before we complicated them with all these heavyweight frameworks. The compiler for Svelte is doing a lot of heavy lifting here, but it's truly worth it. I decided to build this site as my first project in Svelte.",
-        "projectURL": "https://svelte.dev"
-    }
-]
+        {
+            "id": 1,
+            "position": {
+                "x": 0.25,
+                "y": 0.25,
+                "rotate": "0",
+                "scale": 1
+            },
+            "logo": {
+                "key": "ts-logo-512",
+                "name": "TypeScript"
+            },
+            "story": "I was first introduced to Svelte by Mark Oosterveld back in about 2019. It sounded cool, but I was a little worried that all the compiler magic behind the scenes would make any issues with the library difficult to debug. I was reintroduced to it in 2023 when pairing with Jerome Lecomte on one of his projects. I was blown away by how clear and readable the syntax was! This feels like building simple webpages before we complicated them with all these heavyweight frameworks. The compiler for Svelte is doing a lot of heavy lifting here, but it's truly worth it. I decided to build this site as my first project in Svelte.",
+            "projectURL": "https://svelte.dev"
+        }
+    ]
+}
