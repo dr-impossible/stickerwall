@@ -3,6 +3,8 @@
     import wall from "$lib/wall.json"
 </script>
 
-{#each wall as sticker}
-    <Sticker sticker={sticker} />
-{/each}
+<div>
+    {#each wall as sticker}
+        <Sticker sticker={sticker} />
+    {/each}
+</div>
