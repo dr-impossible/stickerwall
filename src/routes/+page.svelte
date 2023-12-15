@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import Sticker from "$lib/sticker.svelte"
+    import wall from "$lib/wall.json"
+</script>
+
+{#each wall as sticker}
+    <Sticker sticker={sticker} />
+{/each}
