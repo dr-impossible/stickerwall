@@ -79,7 +79,7 @@
     }
 </style>
 
-<div class="bounding-box" class:editable={editable} style:top={top} style:left={left} on:click={() => (modalOpened = true)}>
+<div class="bounding-box" class:editable={editable} style:top={top} style:left={left} on:click={() => (!editable && (modalOpened = true))}>
     <img class="sticker" src={`logos/${sticker.logo.key}.svg`} alt={sticker.logo.name} style:width={width} style:height={height} style:rotate={sticker.position.rotate} />
     <img class="ui-handle ui-rotate" src={`icons/rotate.svg`} alt="rotate" />
     <img class="ui-handle ui-resize" src={`icons/square.svg`} alt="resize" />
