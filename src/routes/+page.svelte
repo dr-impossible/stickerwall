@@ -3,6 +3,8 @@
 
     import Sticker from "$lib/sticker.svelte"
     import {title, wall} from "$lib/wall.json"
+
+    let editable = false;
 </script>
 
 <style>
@@ -29,13 +31,14 @@
 
 <header>
     <div class="title">{title}</div>
+    <div>{editable}</div>
     <div class="edit-switch">
-        <Switch size="lg" offLabel="view" onLabel="edit" />
+        <Switch size="lg" offLabel="view" onLabel="edit" bind:checked={editable} />
     </div>
 </header>
 
 <div>
     {#each wall as sticker}
-        <Sticker {sticker} />
+        <Sticker {sticker} {editable} />
     {/each}
 </div>

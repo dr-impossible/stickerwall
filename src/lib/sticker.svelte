@@ -18,6 +18,7 @@
     }
 
     export let sticker: Sticker
+    export let editable: boolean
 
     function positionToCSS(position: number): string {
         return `${position * 100.0}%`
@@ -35,19 +36,18 @@
 
 <style>
     
-    div {
+    .bounding-box {
         --ui-icon-size: 20px;
         position: absolute;
         padding: 5px;
         border: 1px solid rgba(0,0,0,0);
     }
     
-    div:hover {
+    .editable.bounding-box:hover {
         border: 1px dotted black;
-
     }
     
-    div:hover .ui-handle {
+    .editable.bounding-box:hover .ui-handle {
         visibility: visible;
     }
 
@@ -76,8 +76,8 @@
     }
 </style>
 
-<div class="bounding-box" style:top={top} style:left={left} >
+<div class="bounding-box" class:editable={editable} style:top={top} style:left={left} >
     <img class="sticker" src={`logos/${sticker.logo.key}.svg`} alt={sticker.logo.name} style:width={width} style:height={height} style:rotate={sticker.position.rotate} />
     <img class="ui-handle ui-rotate" src={`icons/rotate.svg`} alt="rotate" />
     <img class="ui-handle ui-resize" src={`icons/square.svg`} alt="resize" />
- </div>
+</div>
