@@ -4,7 +4,7 @@
         "position": {
             "x": 0.5,
             "y": 0.5,
-            "rotation": 0,
+            "rotate": "0.3turn",
             "scale": 2.5
         },
         "logo": {
@@ -19,7 +19,7 @@
         "position": {
             "x": 0.25,
             "y": 0.25,
-            "rotation": 0,
+            "rotate": "0",
             "scale": 1
         },
         "logo": {

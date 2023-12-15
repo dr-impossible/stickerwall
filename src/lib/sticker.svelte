@@ -6,7 +6,7 @@
         position: {
             x: number,
             y: number,
-            rotation: number,
+            rotate: string,
             scale: number
         }
         logo: {
@@ -29,8 +29,6 @@
 
     let top = positionToCSS(sticker.position.y)
     let left = positionToCSS(sticker.position.x)
-    let width = scaleToCSS(sticker.position.scale)
-    let height = scaleToCSS(sticker.position.scale)
 </script>
 
 <style>
@@ -41,4 +39,4 @@
     }
 </style>
 
-<img src={`logos/${sticker.logo.key}.svg`} alt={sticker.logo.name} style:top={top} style:left={left} style:width={width} style:height={height} />
+<img src={`logos/${sticker.logo.key}.svg`} alt={sticker.logo.name} style:top={top} style:left={left} style:scale={sticker.position.scale} style:rotate={sticker.position.rotate} />
