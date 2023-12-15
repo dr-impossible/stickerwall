@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { scale } from "svelte/transition";
-
     interface Sticker {
         id: number,
         position: {
