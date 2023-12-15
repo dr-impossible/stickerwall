@@ -8,15 +8,18 @@
 <style>
     header {
         height: 30px;
-        width: 100%;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        background-color: rgb(48, 95, 40);
+        padding: 5px;
+        margin: 0px;
+
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
 
-        background-color: rgb(48, 95, 40);
-        padding: 5px;
-        margin: 0px;
     }
 
     .title {
