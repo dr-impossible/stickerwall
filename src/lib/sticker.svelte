@@ -17,6 +17,16 @@
     export let sticker: Sticker
 </script>
 
+<style>
+    img {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+</style>
+
 <div>
-    {sticker.logo.key}
+    <img src={`logos/${sticker.logo.key}.svg`} />
 </div>
