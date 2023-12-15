@@ -37,6 +37,7 @@
         height: 100px;
         position: absolute;
         padding: 5px;
+        border: 1px solid rgba(0,0,0,0);
     }
 
     div:hover {
